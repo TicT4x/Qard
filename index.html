@@ -992,8 +992,9 @@ function renderFachAuswahl(){
 }
 
 function renderStats(){
-  const total = CARDS.length;
+  // const total = CARDS.length; <--- Diese Zeile wurde entfernt!
   let total = 0, sit = 0, wack = 0, neu = 0, r = 0, w = 0;
+  
   CARDS.forEach(c => {
     const x = rec(c.id);
     if (x.d) return; // Überspringt deaktivierte Karten bei der Zählung
@@ -1001,12 +1002,13 @@ function renderStats(){
     if (x.box === 0) neu++; else if (x.box >= 4) sit++; else wack++;
     r += x.r; w += x.w;
   });
-  // 'total' statt 'CARDS.length' verwenden, falls nötig
+  
   $('sTotal').textContent = total;
   $('sSit').textContent = sit;
   $('sWack').textContent = wack;
   $('sNew').textContent = neu;
   $('sQuote').textContent = (r + w) ? Math.round(100 * r / (r + w)) + '%' : '–';
+  
   const m = $('meter');
   m.children[0].style.width = (total ? 100 * sit / total : 0) + '%';
   m.children[1].style.width = (total ? 100 * wack / total : 0) + '%';

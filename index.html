@@ -1112,7 +1112,9 @@ host.innerHTML = `
   if ($('bCheck')) $('bCheck').onclick = mcPruefen;
   if ($('bNo')){ $('bNo').onclick = () => grade(false); $('bOk').onclick = () => grade(true); }
   if ($('bDeakt')) {
-    $('bDeakt').onclick = () => {
+    $('bDeakt').onclick = (e) => {
+      e.stopPropagation(); // Stoppt den Klick hier, damit er die Karte nicht aufdeckt
+      
       r.d = !r.d;
       r.t = Date.now();
       persist(); // Speichert und synchronisiert den neuen Status

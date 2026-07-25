@@ -37,13 +37,144 @@ ul.mc li[data-richtig],ol.mc li[data-richtig],.mc li.richtig{border-color:#1c6a5
      11  assessment of aerodynamic performance from the drag polar
      12  how to improve the aerodynamic performance
 
-     Sources: AD_Script V100 (2025-03-20), chapters 1-11 and 13.
+     Beyond the checklist, the set also covers the remaining chapters of
+     the design project, because the test asks for the theory and methods
+     applied during the project as a whole:
+      A  Chapter 1  - requirements, payload-range, certification
+      B  Chapter 4  - type of configuration
+      C  Chapter 6  - propulsion system
+      D  Chapter 7  - fuselage and cockpit layout
+      E  Chapter 13 - design assessment
+
+     Sources: AD_Script V100 (2025-03-20), chapters 0-11 and 13-14.
      Chapter 5 (Preliminary Sizing, script pages 96-154) is image-only in
      the PDF; its content was read from the page graphics.
      Chapter 12 (Flight Performance) is NOT contained in this version of
      the script - script pages 326-340 are missing between chapter 11 and
-     chapter 13.
+     chapter 13. Its subject matter (drag polar, point performance) is
+     picked up in the other chapters and is covered there.
      =================================================================== -->
+
+
+<!-- ############ A — REQUIREMENTS & CERTIFICATION ############ -->
+
+<article data-id="116" data-kapitel="Requirements" data-quelle="Lecture Notes" data-ref="Ch. 1">
+<h1>Which information is the minimum needed to start the design of a new aircraft?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>The payload mass m<sub>PL</sub>
+  <span class="begruendung">The designer cannot start without an absolute mass — every other mass in the sizing appears only as a fraction.</span></li>
+<li data-richtig>The number of passengers
+  <span class="begruendung">Drives the cabin length and therefore the whole fuselage layout.</span></li>
+<li data-richtig>The volume of the transport and system compartments
+  <span class="begruendung">Mass alone is not enough: low-density cargo can fill the hold long before the payload mass limit is reached.</span></li>
+<li data-richtig>The design mission
+  <span class="begruendung">The mission profile drives the fuel fraction and thus the take-off mass — this is what the Breguet analysis is applied to.</span></li>
+<li data-begruendung="The wing area is a result of the preliminary sizing (Chapter 5), not an input requirement.">The wing reference area</li>
+<li data-begruendung="Engine type and number are chosen in Chapter 6, after the required thrust or power is known from the sizing.">The engine type and the number of engines</li>
+</ul>
+</article>
+
+
+<article data-id="117" data-kapitel="Requirements" data-quelle="Lecture Notes" data-ref="Ch. 1">
+<h1>Which mass relation is the payload-range diagram based on, and what does the diagram show?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>m<sub>TO</sub> = m<sub>OE</sub> + m<sub>F</sub> + m<sub>PL</sub>
+  <span class="begruendung">Take-off mass = operating empty mass + fuel mass + payload mass. Every point of the diagram is a different split of this sum.</span></li>
+<li data-richtig>It shows the transport capability of one specific aircraft: payload over range
+  <span class="begruendung">It describes an existing (or already sized) aircraft — unlike the seat-range diagram, which compares the whole market.</span></li>
+<li data-richtig>Beyond a certain range, payload has to be traded for fuel
+  <span class="begruendung">Once the tanks are full, more range is only possible by taking out payload, because m<sub>TO</sub> is limited.</span></li>
+<li data-begruendung="That is the matching (constraint) diagram from preliminary sizing.">It plots thrust-to-weight ratio over wing loading</li>
+<li data-begruendung="The payload-range diagram is a property of a single aircraft type. The market overview is the seat-range diagram.">It gives an overview of all aircraft in a market segment</li>
+</ul>
+</article>
+
+
+<article data-id="118" data-kapitel="Requirements" data-quelle="Lecture Notes" data-ref="Ch. 1">
+<h1>How are payload factor and range flexibility defined, and what does experience show about them?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>Payload factor = sold payload / available payload
+  <span class="begruendung">It corrects the average number of passengers on a route to a realistic seat capacity — assuming a permanently full aircraft is unrealistic.</span></li>
+<li data-richtig>Range flexibility = maximum range / average flight distance
+  <span class="begruendung">Airlines expect a margin: the maximum range must be clearly larger than the average leg actually flown.</span></li>
+<li data-richtig>Both rise with the range of the aircraft
+  <span class="begruendung">Long-range aircraft can be utilised better than short-range aircraft, and they carry more range reserve.</span></li>
+<li data-richtig>The realisable payload factor depends on the world economy and can change quickly
+  <span class="begruendung">A downturn hits the airlines first and, with a delay, the manufacturers.</span></li>
+<li data-begruendung="Confusing the two is a classic error. The average distance is what is normally flown; the maximum range is a capability the airline wants to have in reserve.">The average flight distance may be used directly as the maximum range requirement</li>
+</ul>
+</article>
+
+
+<article data-id="119" data-kapitel="Requirements" data-quelle="Lecture Notes" data-ref="Ch. 1">
+<h1>Which approaches are used for market studies of civil aircraft, and what is the "family" concept?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>Analysis of the seat-range diagram, analysis of route concepts, and preparation of a market analysis
+  <span class="begruendung">The three approaches named in the lecture. The seat-range diagram reveals market niches, the route analysis delivers the reference mission, the market analysis the future demand.</span></li>
+<li data-richtig>A family consists of a basis aircraft plus stretched and shortened variants
+  <span class="begruendung">Example: A320 as the basis, stretched A321, shortened A319 and A318.</span></li>
+<li data-richtig>Between family members the number of seats should be altered by about 20 – 25 %
+  <span class="begruendung">Smaller steps do not justify a separate variant; larger steps leave gaps that the family no longer covers.</span></li>
+<li data-richtig>The basis aircraft is the design closest to the optimum
+  <span class="begruendung">The derivatives are compromises around it — which is why the basis version usually has the best economics.</span></li>
+<li data-begruendung="A gap in the seat-range diagram is not automatically a business opportunity. There may be technical or economic reasons for it, and those reasons have to be understood first.">Every gap found in the seat-range diagram is a market niche worth filling</li>
+</ul>
+</article>
+
+
+<article data-id="120" data-kapitel="Requirements" data-quelle="Lecture Notes" data-ref="Ch. 1">
+<h1>Which EASA Certification Specification applies to which aircraft?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>CS-25: Large Aeroplanes
+  <span class="begruendung">The specification behind almost every requirement used in the sizing of a transport aircraft — field length, climb gradients, seating rules.</span></li>
+<li data-richtig>CS-23: Normal, Utility, Aerobatic and Commuter Aeroplanes
+  <span class="begruendung">The general aviation counterpart to CS-25.</span></li>
+<li data-richtig>CS-22: Sailplanes and Powered Sailplanes
+  <span class="begruendung">Together with CS-VLA (Very Light Aeroplanes) and CS-LSA (Light Sport Aeroplanes) it covers the light end of the range.</span></li>
+<li data-richtig>CS-E covers engines and CS-P covers propellers
+  <span class="begruendung">Engines and propellers are certified separately from the airframe; CS-34 and CS-36 add emissions and noise.</span></li>
+<li data-begruendung="CS-27 and CS-29 are the rotorcraft specifications (small and large). Aeroplanes are covered by CS-22, CS-23, CS-25, CS-VLA and CS-LSA.">CS-27 and CS-29 are the specifications for small and large aeroplanes</li>
+</ul>
+</article>
+
+
+<article data-id="121" data-kapitel="Requirements" data-quelle="Lecture Notes" data-ref="Ch. 1">
+<h1>How does the general aircraft certification procedure work?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>A Part-21J approved design organisation designs the aircraft and shows compliance with the applicable Certification Specifications, which leads to a type certificate
+  <span class="begruendung">The type certificate covers the design — one certificate for the whole type.</span></li>
+<li data-richtig>A Part-21G approved production organisation issues a certificate of airworthiness and a Statement of Conformity for each individual aircraft produced
+  <span class="begruendung">This is the step from "the design is approved" to "this particular aircraft matches the approved design".</span></li>
+<li data-richtig>Continued airworthiness has to be ensured according to Part-M, with maintenance done by a Part-145 organisation
+  <span class="begruendung">Plus a valid noise certificate and a valid insurance before the aircraft may be operated.</span></li>
+<li data-richtig>The head of design releases the prototype for the first flight
+  <span class="begruendung">The most important person in the design process — authorities delegate a large part of the certification duties to responsible persons inside the company.</span></li>
+<li data-begruendung="A type certificate applies to the design of the type. Each individual aircraft additionally needs its own certificate of airworthiness and Statement of Conformity.">One type certificate is sufficient to operate each individual aircraft of that type</li>
+</ul>
+</article>
+
+
+<article data-id="122" data-kapitel="Requirements" data-quelle="Lecture Notes" data-ref="Ch. 1">
+<h1>Besides customer requirements and Certification Specifications, which constraints have to be considered?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>Safety: fuel reserve, emergency exits, aisle width, ditching, oxygen supply, fire protection
+  <span class="begruendung">Many of these directly shape the fuselage and cabin layout of Chapter 7.</span></li>
+<li data-richtig>Airports and fleet strategy: gangways, ground equipment, turning radius, containers, fleet commonality
+  <span class="begruendung">An aircraft that does not fit the existing airport and fleet infrastructure is hard to sell — think of the gate constraints that fixed the A380 span at 80 m.</span></li>
+<li data-richtig>Structure and systems: loads and load factors, safe-life / fail-safe / damage tolerant philosophy, corrosion prevention, maintenance concepts, accessibility
+  <span class="begruendung">The construction philosophy is a design decision with consequences for weight and operating cost.</span></li>
+<li data-richtig>Flight performance: static and dynamic stability, trimming, controllability, control forces, stall behaviour, noise
+  <span class="begruendung">These are the constraints that later drive the empennage sizing in Chapter 11.</span></li>
+<li data-begruendung="Compliance with the Certification Specifications is the minimum, not the whole job. A certifiable aircraft can still be unsellable and unoperable.">If the design complies with the Certification Specifications, no further constraints have to be considered</li>
+</ul>
+</article>
 
 
 <!-- ############ 1 — TYPICAL VALUES ############ -->
@@ -211,19 +342,6 @@ ul.mc li[data-richtig],ol.mc li[data-richtig],.mc li.richtig{border-color:#1c6a5
 </article>
 
 
-<article data-id="11" data-kapitel="Preliminary Sizing" data-quelle="Lecture Notes" data-ref="Ch. 5">
-<h1>Where is the design point usually chosen in the matching diagram of a transport aircraft?</h1>
-
-<ul class="mc" data-mischen>
-<li data-richtig>At the highest permissible wing loading and the lowest thrust-to-weight ratio that still satisfies all constraints
-  <span class="begruendung">A high W/S means a small wing (low weight, low wetted area, low drag) and a low T/W means a small engine (low weight, low fuel burn and low cost).</span></li>
-<li data-begruendung="A low wing loading gives an unnecessarily large and heavy wing.">At the lowest possible wing loading</li>
-<li data-begruendung="Excess thrust costs weight, fuel and money; it is only chosen if a requirement demands it.">At the highest possible thrust-to-weight ratio</li>
-<li data-begruendung="Points outside the feasible region violate at least one requirement and are not designs at all.">Anywhere outside the feasible region, as long as it is close to it</li>
-</ul>
-
-<p>Practical designs often keep a small margin to the constraint boundaries, because the underlying assumptions (C<sub>L,max</sub>, C<sub>D0</sub>, masses) are still uncertain at this stage.</p>
-</article>
 
 
 <article data-id="12" data-kapitel="Preliminary Sizing" data-quelle="Lecture Notes" data-ref="Ch. 5 / Ch. 9">
@@ -325,6 +443,432 @@ ul.mc li[data-richtig],ol.mc li[data-richtig],.mc li.richtig{border-color:#1c6a5
 </ul>
 
 <div class="note">Always cross-check a mass estimate with a second method, and use real component masses whenever they are available.</div>
+</article>
+
+
+<!-- ############ B — TYPE OF CONFIGURATION ############ -->
+
+<article data-id="123" data-kapitel="Configuration" data-quelle="Lecture Notes" data-ref="Ch. 4">
+<h1>Why is it desirable to place the centres of gravity of fuel, payload/systems and operating empty weight at the same longitudinal location?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>It leads to a small c.g. travel
+  <span class="begruendung">If all three groups sit at the same station, burning fuel or changing the payload hardly moves the total c.g.</span></li>
+<li data-richtig>Less trim power is needed, so stabilizer areas and lever arms can be smaller
+  <span class="begruendung">The empennage has to cover the whole c.g. range — a narrow range means a small tail.</span></li>
+<li data-richtig>The reduced wetted area lowers the drag
+  <span class="begruendung">A smaller tail means less S<sub>wet</sub> and therefore a lower C<sub>D0</sub> — the direct link from configuration decisions to aerodynamic performance.</span></li>
+<li data-begruendung="The condition has to hold for all fuel states, not just for the full tanks. That is exactly why the fuel is placed close to the c.g. — usually in the wing box.">It is sufficient if the condition holds for the full-fuel case</li>
+<li data-begruendung="It is the other way round: aligning the centres of gravity reduces the required stabilizer area.">It allows a larger horizontal stabilizer, which improves stability</li>
+</ul>
+</article>
+
+
+<article data-id="124" data-kapitel="Configuration" data-quelle="Lecture Notes" data-ref="Ch. 4 / Ch. 11">
+<h1>Why must the critical Mach number of stabilizer and control surfaces be higher than that of the wing?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>Because the flow around the stabilizers must stay undisturbed even when the flow around the wing is already disturbed
+  <span class="begruendung">Control must be maintained in all situations — control surface deflections in separated flow are meaningless.</span></li>
+<li data-richtig>It is achieved through the choice of airfoil, thickness ratio and sweep angle of the stabilizer
+  <span class="begruendung">Rule of thumb for transonic aircraft: sweep about 5&deg; higher and t/c about 10 % lower than the outboard wing, giving roughly &Delta;Ma<sub>crit</sub> = 0.05.</span></li>
+<li data-richtig>The wing itself should be designed so that the aircraft does not cruise too far into the drag rise
+  <span class="begruendung">The second of the "always keep in mind" rules: airfoil type, t/c and sweep have to be chosen so that no excessive drag rise occurs at cruise Mach number.</span></li>
+<li data-begruendung="A thicker stabilizer would lower its critical Mach number — the opposite of what is required.">A thicker stabilizer airfoil raises its critical Mach number</li>
+<li data-begruendung="Shock-induced separation on the tail costs control power exactly when it is most needed. The requirement is a hard safety issue, not a comfort item.">The requirement only concerns passenger comfort, not safety</li>
+</ul>
+</article>
+
+
+<article data-id="125" data-kapitel="Configuration" data-quelle="Lecture Notes" data-ref="Ch. 4">
+<h1>Which further basic technical considerations govern the configuration layout?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>Major components should intersect as close as possible to 90&deg; to minimise interference drag
+  <span class="begruendung">Applies to nacelle on wing, nacelle on fuselage, wing on fuselage. Where 90&deg; is impossible, fairings are needed.</span></li>
+<li data-richtig>At high subsonic speeds local area ruling should be applied
+  <span class="begruendung">For aircraft with supersonic requirements the cross-sectional area distribution must be made as smooth as possible — wave drag then becomes an essential design consideration.</span></li>
+<li data-richtig>Major structural components should be grouped to avoid duplicating heavy structure (structural synergism)
+  <span class="begruendung">Example: on a high-wing transport with fuselage-mounted gear, attach the landing gear to the same frames that carry the wing. The Piaggio P-180 shares wing box, aft pressure bulkhead and main gear structure.</span></li>
+<li data-richtig>Configuration design is also influenced by marketing, emotional and styling considerations
+  <span class="begruendung">Explicitly named in the lecture — and the same point returns for the vertical tail: sometimes the solution that performs worse but looks better is the right solution.</span></li>
+<li data-begruendung="The guiding sentence of the chapter is the opposite: think light, think simple, think accessibility, think maintainability, and think cost.">Accessibility and maintainability are detail-design concerns and can be ignored in the conceptual phase</li>
+</ul>
+</article>
+
+
+<article data-id="126" data-kapitel="Configuration" data-quelle="Lecture Notes" data-ref="Ch. 4">
+<h1>Why are most aircraft built today of conventional (tail-aft) configuration?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>In many cases there is no compelling reason for deviating, but there are reasons against deviating
+  <span class="begruendung">The burden of proof lies with the unconventional layout, not with the conventional one.</span></li>
+<li data-richtig>The database and experience for conventional configurations are very large
+  <span class="begruendung">All the statistical methods used throughout the design — Class I and II mass estimation, tail volume coefficients, Oswald factors — were derived from conventional aircraft.</span></li>
+<li data-richtig>For unconventional configurations the database is narrow or non-existent, which brings a very high risk of an unsuccessful design
+  <span class="begruendung">The Beechcraft Starship is the textbook example: about one ton overweight, 300 million dollars of development cost, only 53 aircraft built, and finally withdrawn from the market.</span></li>
+<li data-begruendung="Unconventional configurations are not forbidden by the Certification Specifications; they are avoided because of technical and commercial risk.">Because certification specifications forbid unconventional configurations</li>
+<li data-begruendung="Some unconventional layouts do offer better trimmed L/D — canards and flying wings among them. The obstacle is risk and lack of data, not aerodynamic inferiority.">Because conventional configurations always have the best trimmed lift-to-drag ratio</li>
+</ul>
+</article>
+
+
+<article data-id="127" data-kapitel="Configuration" data-quelle="Lecture Notes" data-ref="Ch. 4">
+<h1>Which statements about canard and tandem-wing configurations are correct?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>They tend towards better trimmed lift-to-drag ratios
+  <span class="begruendung">The forward surface carries lift instead of producing the download of a conventional tail.</span></li>
+<li data-richtig>The canard must stall before the main wing
+  <span class="begruendung">Otherwise an uncontrollable pitch-up can develop — the canard losing lift first gives a nose-down recovery.</span></li>
+<li data-richtig>The canard may spoil the lift distribution of the main wing
+  <span class="begruendung">Its downwash hits the inboard main wing, which is exactly the region designed to stall first.</span></li>
+<li data-richtig>Maximum benefits are only possible with an unstable design
+  <span class="begruendung">Which means an artificial stability system — extra complexity, extra risk and extra certification effort.</span></li>
+<li data-richtig>To trim out the negative pitching moment of the main-wing flaps, the forward wing must be able to produce high lift
+  <span class="begruendung">Achieved with flaps on the canard, variable sweep or high incidence — one reason why canards rarely carry powerful main-wing flaps.</span></li>
+<li data-begruendung="The requirement is exactly the opposite: the canard has to stall first.">The main wing must stall before the canard</li>
+</ul>
+</article>
+
+
+<article data-id="128" data-kapitel="Configuration" data-quelle="Lecture Notes" data-ref="Ch. 4">
+<h1>Which statements about delta wing configurations are correct?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>The structure is very robust, which suits high load factors
+  <span class="begruendung">The deep root chord allows a very stiff, light wing box — one reason deltas dominate among fighters and fast bombers.</span></li>
+<li data-richtig>Good high-&alpha; and post-stall behaviour thanks to vortex lift
+  <span class="begruendung">The leading-edge vortices keep generating lift far beyond the conventional stall angle.</span></li>
+<li data-richtig>The large wing gives a low wing loading and high lateral manoeuvrability
+  <span class="begruendung">The reference area is enormous relative to the aircraft size.</span></li>
+<li data-richtig>The low lift-curve slope forces high angles of attack for maximum lift
+  <span class="begruendung">A problem at take-off and landing: long, nose-high approaches and a landing gear that has to allow large rotation angles.</span></li>
+<li data-richtig>The low aspect ratio produces high drag at high lift
+  <span class="begruendung">Induced drag scales with 1/A — the price for the robust, low-wave-drag planform.</span></li>
+<li data-begruendung="A delta has a low aspect ratio and therefore high induced drag in slow flight. Its strength is high-speed and high-load-factor flight, not low-speed efficiency.">A delta wing has particularly low induced drag in slow flight</li>
+</ul>
+</article>
+
+
+<article data-id="129" data-kapitel="Configuration" data-quelle="Lecture Notes" data-ref="Ch. 4">
+<h1>Which statements about flying wing and blended wing-body configurations are correct?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>No weight is spent on an empennage, and they tend towards higher trimmed L/D
+  <span class="begruendung">Together with the good payload weight fraction and mass distribution, these are the classic arguments for the layout.</span></li>
+<li data-richtig>Military versions benefit from a low radar cross section
+  <span class="begruendung">The Northrop B-2 is the standard example.</span></li>
+<li data-richtig>The usable c.g. range is very small
+  <span class="begruendung">Without a tail, the trim authority is limited, so the whole loading envelope must fit into a narrow band — a hard constraint on payload flexibility.</span></li>
+<li data-richtig>They tend towards low pitch damping, so a digital flight control system may be needed
+  <span class="begruendung">Longitudinal stability has to be provided artificially.</span></li>
+<li data-richtig>Pressurisation is problematic and the roll motion is unpleasant for passengers seated away from the centreline
+  <span class="begruendung">Which is why the concept is generally considered better suited to freight operations.</span></li>
+<li data-begruendung="A non-circular, wide cabin cross section is structurally poor for pressurisation — this is one of the main obstacles of the concept.">The flat cross section is structurally ideal for a pressurised cabin</li>
+</ul>
+</article>
+
+
+<article data-id="130" data-kapitel="Configuration" data-quelle="Lecture Notes" data-ref="Ch. 4">
+<h1>Which statements about the three-surface configuration are correct?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>It minimises induced trim drag over a wider range of c.g. positions
+  <span class="begruendung">With both a canard and a tail, the trim load can be shared instead of being carried by one surface alone.</span></li>
+<li data-richtig>Ideally the total lift of wing, canard and tail stays the same for all control inputs
+  <span class="begruendung">The surfaces work against each other rather than against the wing.</span></li>
+<li data-richtig>It costs increased complexity, additional weight and interference drag
+  <span class="begruendung">Three lifting surfaces mean three sets of structure, systems and junctions.</span></li>
+<li data-begruendung="The Piaggio P-180 Avanti is the classic civil example, the Sukhoi Su-33 the military one.">No aircraft has ever been built in this configuration</li>
+<li data-begruendung="A third surface adds wetted area and junctions; it reduces trim drag, not zero-lift drag.">It reduces the zero-lift drag compared with a conventional layout</li>
+</ul>
+</article>
+
+
+
+<!-- ############ C — PROPULSION SYSTEM ############ -->
+
+<article data-id="131" data-kapitel="Propulsion System" data-quelle="Lecture Notes" data-ref="Ch. 6">
+<h1>What distinguishes a "fixed size" from a "rubber size" engine in conceptual design?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>Fixed size means an existing engine is chosen, so sizes and weights are known
+  <span class="begruendung">The COTS approach: the aircraft is designed around the engine. Low risk, but the engine is never a perfect match.</span></li>
+<li data-richtig>Rubber size means a new engine is assumed to be designed to fit the aircraft, so sizes and weights have to be estimated
+  <span class="begruendung">Gives the best performing aircraft, because the engine matches the requirements exactly.</span></li>
+<li data-richtig>Developing a new engine alongside a new aircraft can delay the whole aircraft project
+  <span class="begruendung">Rolls-Royce RB.211 and the L-1011 TriStar, EPI TP400 and the A400M, Pratt &amp; Whitney F135 and the F-35 — all with massive financial penalties.</span></li>
+<li data-richtig>For a low risk design, choose an existing engine and design the aircraft around it
+  <span class="begruendung">The explicit recommendation of the lecture's lessons learned.</span></li>
+<li data-begruendung="With a rubber engine the performance, mass, size and cost may change later during development — and every change alters the aircraft's performance.">The rubber engine approach carries no risk, since the engine is designed to fit</li>
+</ul>
+</article>
+
+
+<article data-id="132" data-kapitel="Propulsion System" data-quelle="Lecture Notes" data-ref="Ch. 6">
+<h1>On which considerations does the choice of the number of engines depend?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>The ratio of the total thrust needed to the thrust available per engine
+  <span class="begruendung">The most basic constraint: if no single engine delivers enough thrust, more engines are needed.</span></li>
+<li data-richtig>Safety considerations, i.e. the probability of failure
+  <span class="begruendung">More engines mean a higher probability that one fails — but a smaller share of thrust lost when it does. That trade also drives the CS-25.121 climb gradients.</span></li>
+<li data-richtig>Economic considerations: drag, engine efficiency, weight of propulsion and fuel system, purchasing and operating cost
+  <span class="begruendung">Fewer, larger engines are usually more efficient — larger engines produce higher thrust per engine weight.</span></li>
+<li data-begruendung="More engines increase the one-engine-inoperative thrust reserve, but they also add nacelle drag, weight, systems and maintenance cost. There is no free lunch.">More engines are always the safer and therefore better choice</li>
+<li data-begruendung="The number of engines is a configuration decision made in Chapter 6 and it feeds straight back into the sizing — the OEI climb constraint contains the factor N/(N−1).">The number of engines has no influence on the matching diagram</li>
+</ul>
+</article>
+
+
+<article data-id="133" data-kapitel="Propulsion System" data-quelle="Lecture Notes" data-ref="Ch. 6">
+<h1>Which statements about under-wing mounted jet engines are correct?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>It is the most used configuration for transport aircraft
+  <span class="begruendung">Good accessibility for maintenance and bending moment relief for the wing structure.</span></li>
+<li data-richtig>The engine mass relieves the wing bending moment
+  <span class="begruendung">The engine weight acts opposite to the lift, reducing the root bending moment — a genuine structural weight saving.</span></li>
+<li data-richtig>FOD ingestion is a risk, so a clearance of roughly half a nacelle diameter to the ground is used as a rule of thumb
+  <span class="begruendung">A hard geometric constraint that couples the engine position to the landing gear length of Chapter 10.</span></li>
+<li data-richtig>Engine-out controllability suffers and the noise emission to the ground is high
+  <span class="begruendung">The lateral offset y<sub>E</sub> of a wing-mounted engine is exactly what sizes the vertical stabilizer for the OEI case.</span></li>
+<li data-begruendung="An over-wing installation shields the noise with the wing, and a tail or over-fuselage installation shields it with the fuselage. Under-wing engines radiate directly downwards.">The wing shields the engine noise from the ground</li>
+</ul>
+</article>
+
+
+<article data-id="134" data-kapitel="Propulsion System" data-quelle="Lecture Notes" data-ref="Ch. 6">
+<h1>Match the jet engine installation to its characteristic advantage or drawback.</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>Over-wing: no FOD problem and the thrust axis lies close to the vertical c.g., but stronger pylons are required
+  <span class="begruendung">The small thrust-induced pitching moment is the main aerodynamic argument; the disturbed flow on the upper surface, where about two thirds of the lift is generated, is the main penalty.</span></li>
+<li data-richtig>Aft fuselage: a clean wing gives higher aerodynamic efficiency and the lateral spacing is small, but wing vortices can be ingested at high &alpha;
+  <span class="begruendung">The A-10 needs a fixed slat on the inner wing for exactly this reason.</span></li>
+<li data-richtig>Tail mounted: no FOD problem and the nacelle can be counted towards the vertical tail area, but the tail gets heavier and accessibility is poor
+  <span class="begruendung">Combined with an S-duct it can also reduce fuselage separation drag, as on the L-1011 — but the duct needs careful design to avoid internal separation.</span></li>
+<li data-richtig>Buried in the fuselage: less wetted area than a podded engine and a lower radar cross section, but the engines take up fuselage space
+  <span class="begruendung">A good choice for fighters, where afterburners are also integrated easily — and a poor one for large payloads.</span></li>
+<li data-begruendung="An over-fuselage installation prevents a conventional tail arrangement — the RQ-4 Global Hawk and the Eclipse 400 both use V-tails or similar.">Over-fuselage installation is fully compatible with a conventional tail</li>
+</ul>
+</article>
+
+
+<article data-id="135" data-kapitel="Propulsion System" data-quelle="Lecture Notes" data-ref="Ch. 6">
+<h1>Which statements about tractor and pusher propeller installations are correct?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>A fuselage tractor gives a short forebody and therefore a long tail lever arm
+  <span class="begruendung">Good stability with a small stabilizer — plus good cooling and a propeller in undisturbed air.</span></li>
+<li data-richtig>A fuselage pusher gives good visibility over the nose and less cabin noise
+  <span class="begruendung">Wing and fuselage also work in undisturbed air, which reduces skin friction drag and fuselage separation drag.</span></li>
+<li data-richtig>A pusher suffers from reduced propeller efficiency and needs a propeller clearance of at least 0.22 m during rotation and landing
+  <span class="begruendung">Which usually forces a longer, heavier landing gear. The short tail lever arm is the other main drawback.</span></li>
+<li data-richtig>A wing-mounted tractor gives bending moment relief and leaves the fuselage in undisturbed air
+  <span class="begruendung">At the price of engine-out controllability problems and long gear legs on low-wing designs.</span></li>
+<li data-begruendung="For a wing-mounted propeller the crew must not be located in the plane of the blades, because of the risk of a blade failure.">On a wing-mounted tractor the crew should sit exactly in the propeller blade plane</li>
+</ul>
+</article>
+
+
+<article data-id="136" data-kapitel="Propulsion System" data-quelle="Lecture Notes" data-ref="Ch. 6">
+<h1>What has to be watched when estimating the engine mass?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>The weight quoted by the engine manufacturer is the non-integrated (dry) engine weight
+  <span class="begruendung">Pylon, cowling, intake, fuel system, propeller and thrust reverser still have to be added by the aircraft manufacturer.</span></li>
+<li data-richtig>Integration can increase the dry weight by a factor of about 1.3 – 1.7
+  <span class="begruendung">Strongly dependent on the individual configuration — one of the classic sources of an optimistic mass estimate.</span></li>
+<li data-richtig>Roskam gives W<sub>e</sub> = 0.213 &middot; T<sub>TO</sub> for non-afterburning turbofans, in pounds
+  <span class="begruendung">The Cessna method W<sub>e</sub> = K<sub>p</sub> &middot; P<sub>TO</sub> covers propeller aircraft up to 200 kts, with K<sub>p</sub> = 1.1–1.8 for piston and 0.35–0.55 for turboprop engines.</span></li>
+<li data-richtig>For a two-engine small piston aircraft the integrated engine weight can reach about 30 % of the operating empty weight
+  <span class="begruendung">For large turbofan aircraft the fraction tends towards about 17 % — larger engines produce higher thrust per engine weight.</span></li>
+<li data-begruendung="In conceptual design the engines may be treated as mass points with sufficient accuracy — but their position matters enormously, because shifting an engine strongly shifts the total c.g.">The engine position may be ignored in the c.g. estimation, as long as the total mass is right</li>
+</ul>
+</article>
+
+
+<article data-id="137" data-kapitel="Propulsion System" data-quelle="Lecture Notes" data-ref="Ch. 6 / Ch. 2">
+<h1>Which orders of magnitude apply to the drag of the propulsion installation?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>Nacelle (total engine) drag of a typical jet airliner: about 5 – 10 % of the total aircraft drag
+  <span class="begruendung">Only estimation factors can be given, because nacelle drag interacts strongly with the wing flow and depends heavily on the inlet geometry.</span></li>
+<li data-richtig>Total engine drag of a propeller aircraft: about 8 – 12 % of the total aircraft drag
+  <span class="begruendung">This figure typically already includes the cooling drag, which is significant for propeller-driven aircraft.</span></li>
+<li data-richtig>Cooling drag is partly caused by flow separation from the exhaust gases
+  <span class="begruendung">And the sizing of the cooling area is normally left to specialists — far too many variables for conceptual design.</span></li>
+<li data-richtig>An under-wing installation yields less drag, regardless of the engine type
+  <span class="begruendung">About two thirds of the lift is produced on the upper surface, so disturbing the lower surface costs less.</span></li>
+<li data-begruendung="Nacelle drag is very hard to predict because of the strong interference with the wing flow and its dependence on the inlet geometry. Only estimation factors can be given at this stage.">Nacelle drag can be predicted very accurately from the frontal area alone</li>
+</ul>
+</article>
+
+
+<article data-id="138" data-kapitel="Propulsion System" data-quelle="Lecture Notes" data-ref="Ch. 6 / Ch. 5">
+<h1>Which statements about electric and hybrid electric propulsion are correct?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>Efficiency and scalability make it possible to distribute the propulsion system over the whole aircraft
+  <span class="begruendung">And no heavy gearboxes are needed — the electric motor turns at the required speed directly.</span></li>
+<li data-richtig>Performance is independent of altitude, and efficiency is mostly independent of size
+  <span class="begruendung">Which is why the power lapse models of Chapter 5 (density ratio, Gagg and Ferrar) do not apply to electric aircraft.</span></li>
+<li data-richtig>Battery storage is highly inefficient compared with fossil fuels
+  <span class="begruendung">Motor gasoline reaches about 11 600 W&middot;h/kg in practice, while even Lithium-Sulfur only reaches about 350 W&middot;h/kg — a factor of more than 30.</span></li>
+<li data-richtig>New statistical mass estimation methods are needed and the sizing process has to be modified
+  <span class="begruendung">Plus very different cooling needs and therefore different drag.</span></li>
+<li data-begruendung="Hybrid systems open up new design options but also many pitfalls — the lecture's warning is explicitly: watch the weight!">A hybrid layout combines the advantages of both systems without a weight penalty</li>
+</ul>
+</article>
+
+
+<article data-id="139" data-kapitel="Propulsion System" data-quelle="Lecture Notes" data-ref="Ch. 6">
+<h1>Which "lessons learned" does the lecture draw from the propulsion layout?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>The propulsion layout must be right on the first attempt, or extensive rework follows
+  <span class="begruendung">Engines are typically the largest single items in an aircraft, both by weight and by size.</span></li>
+<li data-richtig>If you change the propulsion layout, you redesign the entire aircraft
+  <span class="begruendung">Which is why propulsion integration is the first step after preliminary sizing — no other system influences the design as much.</span></li>
+<li data-richtig>A rubber engine gives the best performing aircraft, but carries the risk of later changes in performance, mass, size and cost
+  <span class="begruendung">The choice between rubber and fixed engine is a risk decision, not a purely technical one.</span></li>
+<li data-begruendung="Propulsion systems are highly complex by their nature and the proper installation is an art of its own — the lecture points explicitly to the separate Propulsion System Integration course.">Propulsion integration is a simple task that can safely be left to the end of the design</li>
+</ul>
+</article>
+
+
+
+<!-- ############ D — FUSELAGE AND COCKPIT LAYOUT ############ -->
+
+<article data-id="140" data-kapitel="Fuselage and Cockpit" data-quelle="Lecture Notes" data-ref="Ch. 7">
+<h1>Which tasks does the fuselage have to fulfil?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>Provide the space for crew, passengers and baggage, cargo, mission equipment and possibly fuel
+  <span class="begruendung">For a passenger aircraft this is the dominant driver: with a given number of passengers and seats abreast, length and diameter are essentially determined.</span></li>
+<li data-richtig>Carry the forces and moments coming from the empennage
+  <span class="begruendung">Which is why the tail cone structure grows with the stabilizer size — one more reason to keep the stabilizers small.</span></li>
+<li data-richtig>Carry the internal pressure of a pressurised cabin and the inertia forces from manoeuvres and landing
+  <span class="begruendung">The pressure load is what makes the circular cross section structurally attractive.</span></li>
+<li data-richtig>Contribute as little as possible to the overall drag
+  <span class="begruendung">The fuselage adds a large wetted area without producing lift — it is pure C<sub>D0</sub>.</span></li>
+<li data-begruendung="On most aircraft the fuselage produces no useful lift; on a conventional layout it even contributes a destabilising pitching moment.">Generate a significant share of the total lift</li>
+</ul>
+</article>
+
+
+<article data-id="141" data-kapitel="Fuselage and Cockpit" data-quelle="Lecture Notes" data-ref="Ch. 7">
+<h1>Which statements about the fuselage fineness ratio l<sub>F</sub>/d<sub>F</sub> are correct?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>Minimum fuselage drag for subsonic aircraft is achieved at about l<sub>F</sub>/d<sub>F</sub> = 6 – 8
+  <span class="begruendung">Shorter and thicker means more pressure drag; longer and thinner means more wetted area.</span></li>
+<li data-richtig>A longer fuselage increases the lever arm of the stabilizers and therefore allows smaller stabilizer areas
+  <span class="begruendung">So the drag optimum of the fuselage alone is not the optimum of the whole aircraft — less stabilizer area means less structural weight and less drag.</span></li>
+<li data-richtig>Stretch versions reach about l<sub>F</sub>/d<sub>F</sub> = 14, shrink versions as little as about 5
+  <span class="begruendung">A family shares the cross section, so the fineness ratio is what changes.</span></li>
+<li data-richtig>For supersonic aircraft the minimum drag is achieved for l<sub>F</sub>/d<sub>F</sub> &rarr; &infin;
+  <span class="begruendung">Long and slender is what minimises wave drag — the same reasoning behind the Sears-Haack body and the area rule.</span></li>
+<li data-begruendung="For a non-circular cross section an equivalent diameter is calculated from the cross-sectional area: A = (π/4)·d_equiv².">For a non-circular cross section the fineness ratio cannot be defined</li>
+</ul>
+</article>
+
+
+<article data-id="142" data-kapitel="Fuselage and Cockpit" data-quelle="Lecture Notes" data-ref="Ch. 7">
+<h1>A single-aisle aircraft is to carry 180 passengers at 6 seats abreast. Which cabin length results?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>About 30 – 33 m
+  <span class="begruendung">l<sub>cabin</sub> = k<sub>cabin</sub> &middot; n<sub>pax</sub> / n<sub>SA</sub> with k<sub>cabin</sub> = 1.0 … 1.1 m: 1.0 &middot; 180/6 = 30 m up to 1.1 &middot; 180/6 = 33 m.</span></li>
+<li data-begruendung="This would use k_cabin ≈ 1.05 m without dividing by the number of seats abreast — the cabin length scales with the number of rows, not with the number of passengers.">About 190 m</li>
+<li data-begruendung="This is roughly half the correct value; it would correspond to 12 seats abreast, i.e. a twin-aisle wide-body.">About 16 m</li>
+<li data-begruendung="Far too short. That would be about 30 passengers at 6 abreast — a commuter aircraft, not a 180-seater.">About 5 m</li>
+</ul>
+
+<p>The statistical factor k<sub>cabin</sub> = 1.0 … 1.1 m covers not only the seat pitch but also the lavatories, galleys, wardrobes, doors and emergency exits distributed along the cabin.</p>
+</article>
+
+
+<article data-id="143" data-kapitel="Fuselage and Cockpit" data-quelle="Lecture Notes" data-ref="Ch. 7">
+<h1>Which rule of CS 25.817 governs the number of seats abreast?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>No more than three seats may be accessed from one aisle
+  <span class="begruendung">An evacuation requirement — nobody should have to climb over more than two seated passengers to reach an aisle.</span></li>
+<li data-richtig>Up to 6 seats across &rarr; single aisle (narrow body), maximum 3 – 3 seating
+  <span class="begruendung">Two rows of three, each with its own side of the aisle.</span></li>
+<li data-richtig>More than 6 and up to 12 seats across &rarr; twin aisle (wide body), maximum 3 – 6 – 3 seating
+  <span class="begruendung">In practice not more than 3 – 5 – 3 is used, on the A380.</span></li>
+<li data-begruendung="A 4-4 layout would require four seats to be accessed from one aisle, which CS 25.817 does not allow.">An 8-abreast cabin may be laid out as 4 – 4 with a single aisle</li>
+<li data-begruendung="The rule is a certification requirement, not a comfort guideline. It fixes the minimum number of aisles for a chosen seat count.">The rule is only a comfort recommendation and may be exceeded</li>
+</ul>
+</article>
+
+
+<article data-id="144" data-kapitel="Fuselage and Cockpit" data-quelle="Lecture Notes" data-ref="Ch. 7 / Ch. 1">
+<h1>How is the required cargo compartment volume estimated?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>From the baggage and cargo masses of the requirements, using densities of about 170 kg/m&sup3; for baggage and 160 kg/m&sup3; for cargo
+  <span class="begruendung">The requirements of Chapter 1 give masses; the cross section has to provide the corresponding volume.</span></li>
+<li data-richtig>The cargo compartment cross section should if possible be chosen so that standardised containers fit
+  <span class="begruendung">Container compatibility is an operational requirement of the airlines — an aircraft that needs its own container type is at a disadvantage.</span></li>
+<li data-richtig>Underfloor cargo compartments are usually used from about six seats per row upwards
+  <span class="begruendung">Below that the fuselage is simply not deep enough; smaller aircraft carry cargo in dedicated cabin space at the front and rear.</span></li>
+<li data-begruendung="The check runs the other way round: starting from the chosen cross section, it is verified whether the available cargo space is sufficient.">The fuselage cross section is derived from the cargo volume alone</li>
+<li data-begruendung="Payload mass and payload volume are two separate constraints. Low-density cargo fills the hold long before the mass limit is reached — which is exactly why the densities are needed.">If the payload mass fits, the payload volume automatically fits as well</li>
+</ul>
+</article>
+
+
+<article data-id="145" data-kapitel="Fuselage and Cockpit" data-quelle="Lecture Notes" data-ref="Ch. 7">
+<h1>Which statements about the fuselage cross section and the cockpit are correct?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>For pressurised aeroplanes the circle is the structurally most efficient cross section
+  <span class="begruendung">Internal pressure produces pure membrane stress in a circular shell — any other shape needs bending-stiff frames.</span></li>
+<li data-richtig>For small aeroplanes a circular cross section is wasteful in terms of usable volume
+  <span class="begruendung">Hence the remark from Short Aircraft: we put square things in our aircraft — why should we make the fuselage a circle?</span></li>
+<li data-richtig>The cockpit window inclination should not be less than 30&deg; to avoid reflections
+  <span class="begruendung">Flat windows are cheaper, curved windows give lower drag — a classic cost versus performance decision.</span></li>
+<li data-richtig>Over-nose and over-side vision angles are critical for safety, especially during take-off and landing
+  <span class="begruendung">In conceptual design it is enough to ensure the crew has the best possible view; the vision angles then fix the length and shape of the nose section.</span></li>
+<li data-begruendung="Aspects to be considered are the usability of the volume, strength/stiffness/weight, drag, pressurisation and production cost — a genuine multi-criteria decision.">The cross section is determined by the drag requirement alone</li>
+</ul>
+</article>
+
+
+<article data-id="146" data-kapitel="Fuselage and Cockpit" data-quelle="Lecture Notes" data-ref="Ch. 7">
+<h1>How is the fuselage of a general aviation aircraft structured?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>Into three modules: engine bay, cockpit and passenger cabin, and tail lever arm
+  <span class="begruendung">Separated by a firewall at the engine bay and by the back of the cabin.</span></li>
+<li data-richtig>The only purpose of the aft part is to provide lever arm for the tail
+  <span class="begruendung">So it should be kept as simple as possible, with a smooth transition from the cabin to prevent flow separation.</span></li>
+<li data-richtig>Cockpit and passenger cabin are not separated; passengers sit directly behind the pilots
+  <span class="begruendung">The cabin and seats are drawn around a scaled drawing of a human — the sizing is driven by headroom and shoulder room requirements.</span></li>
+<li data-richtig>The baggage mass behind the passengers is limited by the c.g. travel
+  <span class="begruendung">A long lever arm behind the c.g. means even a modest baggage mass moves the c.g. a long way aft.</span></li>
+<li data-begruendung="On twin-engine aircraft with wing-mounted engines the nose normally holds navigation systems or baggage, and additional baggage can go into the engine pods.">On a twin-engine aircraft with wing-mounted engines the nose must stay empty</li>
+</ul>
+</article>
+
+
+<article data-id="147" data-kapitel="Fuselage and Cockpit" data-quelle="Lecture Notes" data-ref="Ch. 7 / Ch. 10">
+<h1>What governs the layout of the nose and tail section of a transport aircraft?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>The length of the nose section follows from the cockpit space and the required over-nose vision angle
+  <span class="begruendung">The cockpit must let the crew safely control and monitor the aircraft — in conceptual design, ensuring the best possible view is sufficient.</span></li>
+<li data-richtig>The inclination of the tail must be chosen so that no tail strike occurs at the maximum pitch angle during take-off
+  <span class="begruendung">The rotation angle is a hard geometric constraint linking fuselage, wing position and gear.</span></li>
+<li data-richtig>The final tail inclination can only be fixed after the landing gear has been designed
+  <span class="begruendung">Gear length and position determine the rotation point and therefore the achievable pitch angle — one of the feedback loops between Chapters 7 and 10.</span></li>
+<li data-begruendung="For most aircraft the final length evolves as the design is prepared: pilots' view, packaging of internal components, aerodynamic sleekness and ease of manufacture all contribute.">The overall fuselage length is fixed at the very beginning and never changes</li>
+</ul>
 </article>
 
 
@@ -1039,6 +1583,73 @@ ul.mc li[data-richtig],ol.mc li[data-richtig],.mc li.richtig{border-color:#1c6a5
 </article>
 
 
+<article data-id="148" data-kapitel="Empennage" data-quelle="Lecture Notes" data-ref="Ch. 11">
+<h1>How is the wing position relative to the fuselage determined?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>By splitting the aircraft into a wing group and a fuselage group and solving for x<sub>LEMAC</sub>
+  <span class="begruendung">x<sub>LEMAC</sub> = x<sub>FG</sub> &minus; x<sub>CG,LEMAC</sub> + (m<sub>WG</sub>/m<sub>FG</sub>)&middot;(x<sub>WG,LEMAC</sub> &minus; x<sub>CG,LEMAC</sub>).</span></li>
+<li data-richtig>The wing group typically contains wing, main gear, engines and nacelles
+  <span class="begruendung">The fuselage group contains fuselage, nose gear, empennage and systems. Which components belong where depends on where they are actually attached.</span></li>
+<li data-richtig>A good first assumption is x<sub>CG,LEMAC</sub> = 0.3 &middot; MAC
+  <span class="begruendung">The distance of the total c.g. behind the leading edge of the mean aerodynamic chord — the starting value for the whole iteration.</span></li>
+<li data-richtig>The total c.g. itself follows from x<sub>CG</sub> = &Sigma;(m<sub>i</sub>&middot;x<sub>i</sub>) / &Sigma;m<sub>i</sub>
+  <span class="begruendung">Which is why the component masses of Chapters 6 to 10 all have to be available before the empennage can be sized properly.</span></li>
+<li data-begruendung="The wing position is a result of the c.g. balance between wing group and fuselage group. Placing it by eye is exactly what the x_LEMAC equation replaces.">The wing is placed at the geometric centre of the fuselage</li>
+</ul>
+</article>
+
+
+<article data-id="149" data-kapitel="Empennage" data-quelle="Lecture Notes" data-ref="Ch. 11">
+<h1>Which flight state gives the critical trim case for the horizontal stabilizer?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>Engine below the total c.g.: the flare in approach (landing) configuration, maximum flap setting, most forward c.g.
+  <span class="begruendung">A low-mounted engine produces a nose-up moment; at idle thrust in the flare this support disappears exactly when the flapped wing demands the largest tail download.</span></li>
+<li data-richtig>Engine above the total c.g.: the go-around in approach configuration, maximum flap setting, most forward c.g.
+  <span class="begruendung">A high-mounted engine produces a nose-down moment, which becomes largest when go-around thrust is applied.</span></li>
+<li data-richtig>Take-off rotation is the second critical state for the horizontal stabilizer
+  <span class="begruendung">The tail must rotate the aircraft about the main gear at V<sub>R</sub> — a case that couples empennage sizing to the landing gear position.</span></li>
+<li data-begruendung="M_F is usually nose-up. Neglecting it is therefore conservative for the horizontal stabilizer, which is why the lecture allows it.">The pitching moment of the fuselage M<sub>F</sub> must never be neglected</li>
+<li data-begruendung="Dynamic stability is typically not considered in conceptual design; the sizing is based on trim and static stability.">The stabilizer is sized for the dynamic stability requirement</li>
+</ul>
+</article>
+
+
+<article data-id="150" data-kapitel="Static Stability" data-quelle="Lecture Notes" data-ref="Ch. 11">
+<h1>Which typical static margins are used, and how does the static margin enter the sizing?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>C<sub>M,&alpha;,CG</sub> = &minus;C<sub>L,&alpha;</sub> &middot; (static margin)
+  <span class="begruendung">Instead of merely demanding C<sub>M,&alpha;,CG</sub> &lt; 0, a minimum value for the derivative is prescribed — that is what the static margin buys.</span></li>
+<li data-richtig>Transport aircraft: about 5 – 10 %
+  <span class="begruendung">General aviation aircraft sit slightly higher, at about 5 – 15 %.</span></li>
+<li data-richtig>Propeller training aircraft: about 15 – 25 %
+  <span class="begruendung">Training aircraft are deliberately made very stable and forgiving — at the cost of trim drag and control forces.</span></li>
+<li data-richtig>Fighters with relaxed stability: about 0 to &minus;15 %
+  <span class="begruendung">A negative static margin means the aircraft is statically unstable and needs an artificial stability system — the price for manoeuvrability and low trim drag.</span></li>
+<li data-begruendung="Conventional fighters use about 5 %, clearly less than transport or training aircraft. Only with relaxed stability does the margin become negative.">Conventional fighters use the largest static margins of all categories</li>
+</ul>
+</article>
+
+
+<article data-id="151" data-kapitel="Empennage" data-quelle="Lecture Notes" data-ref="Ch. 11">
+<h1>Which design rules apply specifically to the vertical stabilizer?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>It should use a symmetrical airfoil
+  <span class="begruendung">A cambered fin would produce a permanent side force and a permanent yawing moment in symmetric flight.</span></li>
+<li data-richtig>Subsonic: a sweep angle of less than 20&deg;
+  <span class="begruendung">This achieves a high side force with a small area — sweep reduces the lift curve slope, which is exactly what the fin needs most.</span></li>
+<li data-richtig>Transonic: a sweep angle about 5&deg; higher than the main wing
+  <span class="begruendung">To raise the critical Mach number and avoid shock-induced separation and the resulting loss of control power.</span></li>
+<li data-richtig>At least about one third of the rudder area should remain un-blanketed for spin recovery
+  <span class="begruendung">Which is what drives the position of the horizontal tail relative to the vertical tail.</span></li>
+<li data-begruendung="The lecture states the opposite quite explicitly: never underestimate the power of good looks, especially for vertical tails — sometimes the solution that performs worse but looks better is the right one.">Aesthetic considerations play no role in the design of the vertical tail</li>
+</ul>
+</article>
+
+
 <!-- ############ 7 — SCISSOR DIAGRAM ############ -->
 
 <article data-id="61" data-kapitel="Scissor Diagram" data-quelle="Lecture Notes" data-ref="Ch. 11">
@@ -1457,21 +2068,6 @@ ul.mc li[data-richtig],ol.mc li[data-richtig],.mc li.richtig{border-color:#1c6a5
 </article>
 
 
-<article data-id="85" data-kapitel="Preliminary Sizing" data-quelle="Lecture Notes" data-ref="Ch. 5 p. 99">
-<h1>Which notation is used in the lecture?</h1>
-
-<ul class="mc" data-mischen>
-<li data-richtig>T/W: thrust-to-weight ratio, for jet-driven aircraft
-  <span class="begruendung">Thrust is what a jet manufacturer sells.</span></li>
-<li data-richtig>P/W: power-to-weight ratio, for propeller-driven aircraft
-  <span class="begruendung">Used on the vertical axis of the matching diagrams for props, typically in kW/kg.</span></li>
-<li data-richtig>W/P: weight-to-power ratio or "power loading", for propeller-driven aircraft
-  <span class="begruendung">Simply the reciprocal of P/W — watch which one a given diagram uses, because "low is good" flips.</span></li>
-<li data-richtig>W/S: wing loading, no matter whether defined as mass/area or force/area
-  <span class="begruendung">Both definitions appear in the literature; be consistent within one diagram.</span></li>
-<li data-begruendung="It is the other way round: T/W is sometimes used as a shorthand covering both T/W and P/W in explanatory text.">P/W is used as a synonym for T/W in explanatory texts</li>
-</ul>
-</article>
 
 
 <article data-id="86" data-kapitel="Preliminary Sizing" data-quelle="Lecture Notes" data-ref="Ch. 5 p. 101">
@@ -1992,6 +2588,38 @@ ul.mc li[data-richtig],ol.mc li[data-richtig],.mc li.richtig{border-color:#1c6a5
 </ul>
 
 <p>The better the initial estimates, the less re-designing has to be done.</p>
+</article>
+
+
+<!-- ############ E — DESIGN ASSESSMENT ############ -->
+
+<article data-id="152" data-kapitel="Design Assessment" data-quelle="Lecture Notes" data-ref="Ch. 13">
+<h1>From whose point of view can an aircraft design be assessed?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>The aircraft manufacturer and the supplier
+  <span class="begruendung">For both, the most important requirement is to generate a profit.</span></li>
+<li data-richtig>The operator, i.e. the airline or the private operator
+  <span class="begruendung">Commercial operators also assess by profit; direct operating cost is their key figure.</span></li>
+<li data-richtig>The passenger, the certification authority and the population on the ground
+  <span class="begruendung">Comfort, compliance and noise — three completely different sets of criteria applied to the same aircraft.</span></li>
+<li data-begruendung="An assessment purely by flight performance misses the point of the chapter: for manufacturer and commercial operator the decisive criterion is profit, which means comparing revenue against cost.">A design assessment is a purely technical evaluation of flight performance</li>
+</ul>
+</article>
+
+
+<article data-id="153" data-kapitel="Design Assessment" data-quelle="Lecture Notes" data-ref="Ch. 13">
+<h1>When is the development of a new aircraft considered profitable for a manufacturer?</h1>
+
+<ul class="mc" data-mischen>
+<li data-richtig>When the return on investment is high
+  <span class="begruendung">The capital tied up in the development has to earn more than it would elsewhere.</span></li>
+<li data-richtig>When the break-even point is reached early
+  <span class="begruendung">Aircraft programmes run for decades; the later the break-even, the higher the risk that the market has moved on before it arrives.</span></li>
+<li data-richtig>To estimate the profit, revenues and cost have to be compared
+  <span class="begruendung">Different methods for estimating both can be found in the literature.</span></li>
+<li data-begruendung="A high unit price does not make a programme profitable if the development cost was too high or too few aircraft are sold — the Beechcraft Starship is the cautionary example from Chapter 4.">A high selling price per aircraft alone makes a programme profitable</li>
+</ul>
 </article>
 
 

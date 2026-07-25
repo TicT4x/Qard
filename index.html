@@ -1030,9 +1030,10 @@ function renderCard(){
   const istMC = !!c.mc;
   const richtig = istMC && checked && mcIstRichtig(c);
 
-  host.innerHTML = `
+host.innerHTML = `
   <article class="card">
     <div class="card-top">
+      <span>#${c.id}</span>
       <span class="kap">${c.cat}</span>
       <span class="sp"></span>
       ${istMC ? '<span>Auswahl</span>' : ''}

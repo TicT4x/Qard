@@ -326,6 +326,20 @@ kbd{font-family:var(--mono);font-size:10px;border:1px solid var(--rule);backgrou
 */
 @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
 @media print{header,.actionbar,.fbar,.filters,.stats,footer{display:none}body{background:#fff}}
+
+/* ---------- Deaktivierte Karten ---------- */
+.btn-deakt {
+  background:none; border:0; color:var(--red); font-size:14px; 
+  cursor:pointer; padding:0 0 0 8px; flex:0 0 auto; line-height:1; font-family:var(--sans);
+}
+.btn-deakt:hover { opacity:.7; }
+.btn-deakt.ist-aus {
+  color:var(--ok); font-size:11px; font-weight:600; 
+  text-transform:uppercase; letter-spacing:.05em;
+}
+.li.is-deakt .t { text-decoration:line-through; opacity:.5; }
+.li.is-deakt .dot { background:transparent; border:1px solid var(--rule); }
+  
 </style>
 </head>
 <body>
@@ -783,7 +797,7 @@ function pool(){
 }
 function shuffle(a){ for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 function build(preserveCurrent = false){
-  let p = pool();
+  let p = pool().filter(c => !rec(c.id).d); // Deaktivierte herausfiltern
   if (mode === 'prio'){
     const g = {};
     p.forEach(c => { const b = rec(c.id).box; (g[b] = g[b] || []).push(c); });
@@ -979,12 +993,15 @@ function renderFachAuswahl(){
 
 function renderStats(){
   const total = CARDS.length;
-  let sit = 0, wack = 0, neu = 0, r = 0, w = 0;
+  let total = 0, sit = 0, wack = 0, neu = 0, r = 0, w = 0;
   CARDS.forEach(c => {
     const x = rec(c.id);
+    if (x.d) return; // Überspringt deaktivierte Karten bei der Zählung
+    total++;
     if (x.box === 0) neu++; else if (x.box >= 4) sit++; else wack++;
     r += x.r; w += x.w;
   });
+  // 'total' statt 'CARDS.length' verwenden, falls nötig
   $('sTotal').textContent = total;
   $('sSit').textContent = sit;
   $('sWack').textContent = wack;
@@ -1039,6 +1056,7 @@ host.innerHTML = `
       ${istMC ? '<span>Auswahl</span>' : ''}
       <span>${boxLabel(r.box)}</span>
       <span class="pos">${qi + 1}/${queue.length}</span>
+      <button class="btn-deakt ${r.d ? 'ist-aus' : ''}" id="bDeakt" title="${r.d ? 'Wieder aktivieren' : 'Karte deaktivieren'}">${r.d ? 'Aktivieren' : '✖'}</button>
     </div>
     <div class="q">${c.q}</div>
     ${c.hint ? `<div class="q-hint">${c.hint}</div>` : ''}
@@ -1091,6 +1109,21 @@ host.innerHTML = `
 
   if ($('bCheck')) $('bCheck').onclick = mcPruefen;
   if ($('bNo')){ $('bNo').onclick = () => grade(false); $('bOk').onclick = () => grade(true); }
+  if ($('bDeakt')) {
+    $('bDeakt').onclick = () => {
+      r.d = !r.d;
+      r.t = Date.now();
+      persist(); // Speichert und synchronisiert den neuen Status
+      
+      if (r.d && view === 'learn') {
+        // Wenn die Karte gerade deaktiviert wurde, schmeiß sie direkt aus der aktuellen Queue
+        queue.splice(qi, 1);
+        if (qi >= queue.length) qi = Math.max(0, queue.length - 1);
+        neueKarte();
+      }
+      render();
+    };
+  }
   if ($('bShow')) $('bShow').onclick = reveal;
   $('bPrev').onclick = prev;
   $('bSkip').onclick = next;
@@ -1142,7 +1175,7 @@ function renderList(){
 
   $('listHost').innerHTML = p.map(c => {
     const r = rec(c.id);
-    return `<button class="li" data-jump="${c.id}">
+    return `<button class="li ${r.d ? 'is-deakt' : ''}" data-jump="${c.id}">
       <span class="dot b${r.box}"></span>
       <span class="n">${c.id}</span>
       <span class="t">${c.q}</span>
@@ -1322,7 +1355,16 @@ document.addEventListener('click', e => {
   const j = e.target.closest('[data-jump]');
   if (j){
     view = 'learn'; build();
-    const idx = queue.findIndex(c => c.id === j.dataset.jump);
+    const targetId = j.dataset.jump;
+    let idx = queue.findIndex(c => c.id === targetId);
+    
+    // Falls Karte deaktiviert ist, landet sie nicht im normalen Build. 
+    // Wir packen sie temporär an erste Stelle, damit sie aufgerufen & reaktiviert werden kann.
+    if (idx === -1) {
+      const c = CARDS.find(x => x.id === targetId);
+      if (c) { queue.unshift(c); idx = 0; }
+    }
+    
     if (idx >= 0) qi = idx;
     neueKarte(); render();
     window.scrollTo({ top:0, behavior:'smooth' });
